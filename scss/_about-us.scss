@@ -1,0 +1,22 @@
+#about-us {
+  background: $primary-color1;
+
+  .content {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about-us__image {
+    box-shadow: 0px 16px 16px -4px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(-40px -40px 0px rgba(0, 0, 0, 0.25));
+    border-radius: 25px;
+  }
+}
+
+.about-us__content {
+  .content__text {
+    margin: 30px 0;
+  }
+}

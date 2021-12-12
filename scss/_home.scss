@@ -2,7 +2,7 @@
   background: url(../assets/shape1.svg) no-repeat,
     url(../assets/shape2.svg) no-repeat;
   background-position: left top, right top;
-  background-size: contain, contain;
+  background-size: auto 100%, contain contain;
 }
 
 #home {

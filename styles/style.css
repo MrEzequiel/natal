@@ -10,6 +10,12 @@ body { background: #171e13; color: #f7f7f7; font: 400 1.6rem "Lato", sans-serif;
 
 .content { padding: 60px 0; }
 
+.title { font: 700 6.4rem "Nunito", sans-serif; color: #f8ffed; position: relative; z-index: 2; }
+
+.title::after { content: ''; position: absolute; bottom: 10px; left: -5px; z-index: -1; display: block; width: 180px; height: 50px; background-image: url(../assets/marking2.svg); background-size: contain; background-repeat: no-repeat; }
+
+.text { color: #dedede; font-family: "Lato", sans-serif; font-size: 2.4rem; line-height: 1.5em; }
+
 .btn { cursor: pointer; display: block; width: -webkit-max-content; width: -moz-max-content; width: max-content; padding: 10px 20px; background: #a83b24; border-radius: 25px; font-size: 2.4rem; font-weight: 400; color: #f8ffed; -webkit-transition: -webkit-box-shadow 500ms, -webkit-transform 500ms; transition: -webkit-box-shadow 500ms, -webkit-transform 500ms; transition: box-shadow 500ms, transform 500ms; transition: box-shadow 500ms, transform 500ms, -webkit-box-shadow 500ms, -webkit-transform 500ms; -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
 
 .btn:hover { -webkit-box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.1), inset 0 -49px 0 0 #673025; box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.1), inset 0 -49px 0 0 #673025; -webkit-transform: scale(1.05); transform: scale(1.05); }
@@ -26,7 +32,9 @@ html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img
 
 h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
-.header { position: -webkit-sticky; position: sticky; padding: 40px 0; }
+.header { position: -webkit-sticky; position: sticky; top: 0; left: 0; padding: 40px 0; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+
+.header--scroll { background: rgba(23, 30, 19, 0.5); -webkit-backdrop-filter: blur(25px); backdrop-filter: blur(25px); border-bottom: 1px solid rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1); z-index: 99; padding: 20px; }
 
 .header .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
@@ -42,7 +50,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 .header__nav ul a:hover::after { opacity: 1; visibility: visible; -webkit-transform: translate3d(0, 10px, 0); transform: translate3d(0, 10px, 0); }
 
-.cover { background: url(../assets/shape1.svg) no-repeat, url(../assets/shape2.svg) no-repeat; background-position: left top, right top; background-size: contain, contain; }
+.cover { background: url(../assets/shape1.svg) no-repeat, url(../assets/shape2.svg) no-repeat; background-position: left top, right top; background-size: auto 100%, contain contain; }
 
 #home { display: -ms-grid; display: grid; -ms-grid-columns: 2fr 1fr; grid-template-columns: 2fr 1fr; gap: 40px; }
 
@@ -51,4 +59,12 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 .home__presentation .presentation__title--days { font-weight: 700; position: relative; z-index: 2; }
 
 .home__presentation .presentation__title--days::after { content: ''; display: block; position: absolute; top: 0; left: -5px; background-image: url(../assets/marking1.svg); z-index: -1; width: 128px; height: 128px; }
+
+#about-us { background: #424b35; }
+
+#about-us .content { display: -ms-grid; display: grid; -ms-grid-columns: 5fr 6fr; grid-template-columns: 5fr 6fr; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 40px; }
+
+#about-us .about-us__image { -webkit-box-shadow: 0px 16px 16px -4px rgba(0, 0, 0, 0.1); box-shadow: 0px 16px 16px -4px rgba(0, 0, 0, 0.1); -webkit-filter: drop-shadow(-40px -40px 0px rgba(0, 0, 0, 0.25)); filter: drop-shadow(-40px -40px 0px rgba(0, 0, 0, 0.25)); border-radius: 25px; }
+
+.about-us__content .content__text { margin: 30px 0; }
 /*# sourceMappingURL=style.css.map */
