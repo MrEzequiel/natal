@@ -5,7 +5,6 @@ const verifyScroll = () => {
     header.classList.add('header--scroll')
   } else {
     header.classList.remove('header--scroll')
-    window.scroll(0, 0)
   }
 }
 

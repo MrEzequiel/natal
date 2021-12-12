@@ -1,0 +1,46 @@
+#portfolio {
+  &.container {
+    grid-template-columns: 5fr 6fr;
+    gap: 40px;
+  }
+
+  .content__title {
+    @include insertMarking('../assets/marking3.svg');
+  }
+
+  .portfolio__see-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../assets/image-portfolio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+
+    &:hover::after {
+      background-color: rgba($primary-color1, 0.5);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: rgba($primary-color1, 0.75);
+      border-radius: 25px;
+      transition: background-color 500ms;
+    }
+
+    .see-image__button {
+      z-index: 2;
+    }
+  }
+}

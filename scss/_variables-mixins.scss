@@ -1,5 +1,5 @@
 $color-title: #f8ffed;
-$primary-color1: #424b35;
+$primary-color1: rgb(66, 75, 53);
 $primary-color2: #353d2b;
 $secondary-color: rgb(23, 30, 19);
 $additional-color1: #a83b24;
@@ -7,3 +7,20 @@ $additional-color2: #673025;
 
 $text-font: 'Lato', sans-serif;
 $title-font: 'Nunito', sans-serif;
+
+@mixin insertMarking($url) {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+
+    display: block;
+    width: 128px;
+    height: 50px;
+    background-image: url($url);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

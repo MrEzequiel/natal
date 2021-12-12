@@ -1,12 +1,16 @@
 .header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  padding: 40px 0;
+  position: static;
+
+  padding: 20px 0;
 
   transition: all 0.5s ease;
 
   &--scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
     background: rgba($secondary-color, 0.5);
     backdrop-filter: blur(25px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
