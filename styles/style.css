@@ -1,0 +1,54 @@
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+:root { scroll-behavior: smooth; font-size: 62.5%; }
+
+img { display: block; max-width: 100%; }
+
+body { background: #171e13; color: #f7f7f7; font: 400 1.6rem "Lato", sans-serif; }
+
+.container { max-width: 1160px; padding: 0 20px; margin: 0 auto; }
+
+.content { padding: 60px 0; }
+
+.btn { cursor: pointer; display: block; width: -webkit-max-content; width: -moz-max-content; width: max-content; padding: 10px 20px; background: #a83b24; border-radius: 25px; font-size: 2.4rem; font-weight: 400; color: #f8ffed; -webkit-transition: -webkit-box-shadow 500ms, -webkit-transform 500ms; transition: -webkit-box-shadow 500ms, -webkit-transform 500ms; transition: box-shadow 500ms, transform 500ms; transition: box-shadow 500ms, transform 500ms, -webkit-box-shadow 500ms, -webkit-transform 500ms; -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.btn:hover { -webkit-box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.1), inset 0 -49px 0 0 #673025; box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.1), inset 0 -49px 0 0 #673025; -webkit-transform: scale(1.05); transform: scale(1.05); }
+
+*, *:before, *:after { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+button, input, textarea { outline: none; border: none; color: inherit; font-family: inherit; }
+
+a { text-decoration: none; color: inherit; }
+
+ol, ul { list-style: none; }
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, footer, header, nav, section, main { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+
+h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
+
+.header { position: -webkit-sticky; position: sticky; padding: 40px 0; }
+
+.header .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.header__logo { width: 120px; height: 58px; -o-object-fit: contain; object-fit: contain; }
+
+.header__nav ul { display: -webkit-box; display: -ms-flexbox; display: flex; gap: 40px; }
+
+.header__nav ul a { position: relative; display: block; font-size: 1.8rem; color: #dedede; }
+
+.header__nav ul a::after { content: ''; position: absolute; bottom: 0; left: 0; display: block; background: #a83b24; height: 2px; width: 100%; opacity: 0; visibility: hidden; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: opacity 400ms, visibility 800ms, -webkit-transform 800ms; transition: opacity 400ms, visibility 800ms, -webkit-transform 800ms; transition: transform 800ms, opacity 400ms, visibility 800ms; transition: transform 800ms, opacity 400ms, visibility 800ms, -webkit-transform 800ms; -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.header__nav ul a:hover { color: #f7f7f7; }
+
+.header__nav ul a:hover::after { opacity: 1; visibility: visible; -webkit-transform: translate3d(0, 10px, 0); transform: translate3d(0, 10px, 0); }
+
+.cover { background: url(../assets/shape1.svg) no-repeat, url(../assets/shape2.svg) no-repeat; background-position: left top, right top; background-size: contain, contain; }
+
+#home { display: -ms-grid; display: grid; -ms-grid-columns: 2fr 1fr; grid-template-columns: 2fr 1fr; gap: 40px; }
+
+.home__presentation .presentation__title { font: 400 9.6rem/10.7rem "Nunito", sans-serif; max-width: 460px; color: #f8ffed; margin-bottom: 30px; }
+
+.home__presentation .presentation__title--days { font-weight: 700; position: relative; z-index: 2; }
+
+.home__presentation .presentation__title--days::after { content: ''; display: block; position: absolute; top: 0; left: -5px; background-image: url(../assets/marking1.svg); z-index: -1; width: 128px; height: 128px; }
+/*# sourceMappingURL=style.css.map */

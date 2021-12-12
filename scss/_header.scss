@@ -1,0 +1,58 @@
+.header {
+  position: sticky;
+  padding: 40px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 120px;
+    height: 58px;
+    object-fit: contain;
+  }
+
+  &__nav ul {
+    display: flex;
+    gap: 40px;
+
+    a {
+      position: relative;
+      display: block;
+
+      font-size: 1.8rem;
+      color: #dedede;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        background: $additional-color1;
+        height: 2px;
+        width: 100%;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(0, 0, 0);
+
+        transition: transform 800ms, opacity 400ms, visibility 800ms;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      &:hover {
+        color: #f7f7f7;
+
+        &::after {
+          opacity: 1;
+          visibility: visible;
+          transform: translate3d(0, 10px, 0);
+        }
+      }
+    }
+  }
+}

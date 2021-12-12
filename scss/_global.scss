@@ -1,0 +1,53 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background: $secondary-color;
+  color: #f7f7f7;
+
+  font: 400 1.6rem $text-font;
+}
+
+.container {
+  max-width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 60px 0;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  width: max-content;
+  padding: 10px 20px;
+
+  background: $additional-color1;
+  border-radius: 25px;
+
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: $color-title;
+
+  transition: box-shadow 500ms, transform 500ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.1), inset 0 -49px 0 0 #673025;
+    transform: scale(1.05);
+  }
+}

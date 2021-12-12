@@ -1,0 +1,41 @@
+.cover {
+  background: url(../assets/shape1.svg) no-repeat,
+    url(../assets/shape2.svg) no-repeat;
+  background-position: left top, right top;
+  background-size: contain, contain;
+}
+
+#home {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.home__presentation {
+  .presentation__title {
+    font: 400 9.6rem/10.7rem $title-font;
+    max-width: 460px;
+    color: $color-title;
+
+    margin-bottom: 30px;
+
+    &--days {
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -5px;
+
+        background-image: url(../assets/marking1.svg);
+        z-index: -1;
+        width: 128px;
+        height: 128px;
+      }
+    }
+  }
+}
