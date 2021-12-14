@@ -1,0 +1,84 @@
+#testimony {
+  background: $primary-color1;
+
+  .testimony__title {
+    max-width: max-content;
+    margin: 0 auto;
+
+    @include insertMarking('../assets/marking2.svg');
+  }
+
+  .card-control {
+    margin: 30px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    &__control {
+      cursor: pointer;
+      background: $additional-color2;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+
+      &.active {
+        cursor: default;
+        background: $additional-color1;
+      }
+    }
+  }
+}
+
+#testimony .card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 40 + 54px auto 0;
+
+  .card {
+    position: relative;
+    width: 250px;
+    height: 230px;
+    padding: 30px 20px;
+
+    background: $secondary-color;
+    border-radius: 25px;
+    transition: box-shadow 500ms, transform 500ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.25);
+      transform: translate3d(0, -8px, 0);
+    }
+
+    &__cover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__image {
+      position: absolute;
+      top: -50px;
+    }
+
+    &__title {
+      font-family: $title-font;
+      font-weight: bold;
+      font-size: 2.4rem;
+      color: $color-title;
+      margin-top: 30px;
+    }
+
+    &__testimony {
+      font-size: 1.6rem;
+      line-height: 1.5em;
+      color: #cccccc;
+      margin-top: 10px;
+    }
+  }
+}

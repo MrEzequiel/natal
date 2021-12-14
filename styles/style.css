@@ -77,4 +77,30 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 #portfolio .portfolio__see-images::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; background-color: rgba(66, 75, 53, 0.75); border-radius: 25px; -webkit-transition: background-color 500ms; transition: background-color 500ms; }
 
 #portfolio .portfolio__see-images .see-image__button { z-index: 2; }
+
+#testimony { background: #424b35; }
+
+#testimony .testimony__title { max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; margin: 0 auto; }
+
+#testimony .testimony__title::after { content: ''; position: absolute; bottom: -5px; left: -5px; z-index: -1; display: block; width: 128px; height: 50px; background-image: url("../assets/marking2.svg"); background-size: contain; background-repeat: no-repeat; }
+
+#testimony .card-control { margin: 30px auto 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; gap: 20px; }
+
+#testimony .card-control__control { cursor: pointer; background: #673025; width: 20px; height: 20px; border-radius: 50%; }
+
+#testimony .card-control__control.active { cursor: default; background: #a83b24; }
+
+#testimony .card-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; gap: 50px; margin: 94px auto 0; }
+
+#testimony .card-container .card { position: relative; width: 250px; height: 230px; padding: 30px 20px; background: #171e13; border-radius: 25px; -webkit-transition: -webkit-box-shadow 500ms, -webkit-transform 500ms; transition: -webkit-box-shadow 500ms, -webkit-transform 500ms; transition: box-shadow 500ms, transform 500ms; transition: box-shadow 500ms, transform 500ms, -webkit-box-shadow 500ms, -webkit-transform 500ms; -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+#testimony .card-container .card:hover { -webkit-box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.25); box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.25); -webkit-transform: translate3d(0, -8px, 0); transform: translate3d(0, -8px, 0); }
+
+#testimony .card-container .card__cover { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+#testimony .card-container .card__image { position: absolute; top: -50px; }
+
+#testimony .card-container .card__title { font-family: "Nunito", sans-serif; font-weight: bold; font-size: 2.4rem; color: #f8ffed; margin-top: 30px; }
+
+#testimony .card-container .card__testimony { font-size: 1.6rem; line-height: 1.5em; color: #cccccc; margin-top: 10px; }
 /*# sourceMappingURL=style.css.map */
