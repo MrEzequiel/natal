@@ -120,5 +120,5 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 #faq .faq-container .question--active .question__answer { max-height: 500px; margin-top: 30px; opacity: 1; visibility: visible; }
 
-#faq .faq-container .question__answer { color: #ededed; font-size: 1.6rem; line-height: 1.5em; max-height: 0; opacity: 0; visibility: hidden; -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
+#faq .faq-container .question__answer { color: #b2b2b2; font-size: 1.6rem; line-height: 1.5em; max-height: 0; opacity: 0; visibility: hidden; transform-box: max-height, visibility, margin-top, line-height; -webkit-transition-duration: 500ms; transition-duration: 500ms; -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
 /*# sourceMappingURL=style.css.map */
