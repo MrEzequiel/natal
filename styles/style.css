@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 #faq .faq-container { margin-top: 40px; }
 
-#faq .faq-container .question { cursor: pointer; background: #424b35; border-radius: 25px; padding: 30px; }
+#faq .faq-container .question { cursor: pointer; background: #424b35; border-radius: 25px; padding: 30px; max-width: 960px; margin: 0 auto; }
 
 #faq .faq-container .question + .question { margin-top: 30px; }
 
