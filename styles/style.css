@@ -103,4 +103,22 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 #testimony .card-container .card__title { font-family: "Nunito", sans-serif; font-weight: bold; font-size: 2.4rem; color: #f8ffed; margin-top: 30px; }
 
 #testimony .card-container .card__testimony { font-size: 1.6rem; line-height: 1.5em; color: #cccccc; margin-top: 10px; }
+
+#faq .faq__title { max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; margin: 0 auto; }
+
+#faq .faq__title::after { content: ''; position: absolute; bottom: -5px; left: -5px; z-index: -1; display: block; width: 128px; height: 50px; background-image: url("../assets/marking3.svg"); background-size: contain; background-repeat: no-repeat; }
+
+#faq .faq-container { margin-top: 40px; }
+
+#faq .faq-container .question { cursor: pointer; background: #424b35; border-radius: 25px; padding: 30px; }
+
+#faq .faq-container .question + .question { margin-top: 30px; }
+
+#faq .faq-container .question__header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+#faq .faq-container .question__header .question__title { font: 700 2.4rem "Lato", sans-serif; }
+
+#faq .faq-container .question--active .question__answer { max-height: 500px; margin-top: 30px; opacity: 1; visibility: visible; }
+
+#faq .faq-container .question__answer { color: #ededed; font-size: 1.6rem; line-height: 1.5em; max-height: 0; opacity: 0; visibility: hidden; -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
 /*# sourceMappingURL=style.css.map */

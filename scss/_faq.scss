@@ -1,0 +1,49 @@
+#faq .faq__title {
+  @include insertMarking('../assets/marking3.svg');
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+#faq .faq-container {
+  margin-top: 40px;
+
+  .question {
+    cursor: pointer;
+    background: $primary-color1;
+    border-radius: 25px;
+    padding: 30px;
+
+    & + .question {
+      margin-top: 30px;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .question__title {
+        font: 700 2.4rem $text-font;
+      }
+    }
+
+    &--active .question__answer {
+      max-height: 500px;
+      margin-top: 30px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__answer {
+      color: #ededed;
+
+      font-size: 1.6rem;
+      line-height: 1.5em;
+
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+}
