@@ -6,9 +6,9 @@ img { display: block; max-width: 100%; }
 
 body { background: #171e13; color: #f7f7f7; font: 400 1.6rem "Lato", sans-serif; }
 
-.container { max-width: 1160px; padding: 0 20px; margin: 0 auto; display: -ms-grid; display: grid; }
+.container { max-width: 1160px; padding-right: 20px; padding-left: 20px; margin: 0 auto; display: -ms-grid; display: grid; }
 
-.content { padding: 60px 0; }
+.content { padding-top: 60px; padding-bottom: 60px; }
 
 .title { font: 700 4.8rem "Nunito", sans-serif; color: #f8ffed; position: relative; z-index: 2; }
 
@@ -121,4 +121,32 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 #faq .faq-container .question--active .question__answer { max-height: 500px; margin-top: 30px; opacity: 1; visibility: visible; }
 
 #faq .faq-container .question__answer { color: #b2b2b2; font-size: 1.6rem; line-height: 1.5em; max-height: 0; opacity: 0; visibility: hidden; transform-box: max-height, visibility, margin-top, line-height; -webkit-transition-duration: 500ms; transition-duration: 500ms; -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.footer { background: #424b35; }
+
+.footer .container { -ms-grid-columns: 2fr 1fr 1fr; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+
+.footer__company { font-size: 1.6rem; }
+
+.footer__company__abstract { color: #ededed; max-width: 360px; margin: 30px 0 20px; }
+
+.footer__company__copy { color: #dedede; }
+
+.footer .footer__contact__title { font-family: "Nunito", sans-serif; font-size: 3.6rem; font-weight: bold; color: #f7f7f7; margin-bottom: 30px; }
+
+.footer .footer__contact__list > li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 10px; color: #dedede; padding: 10px 0; max-width: 200px; }
+
+.footer .footer__contact__list__address { padding-top: 0 !important; border-bottom: 3px solid #353d2b; margin-bottom: 10px; }
+
+.footer .footer__contact__list__address address { font-style: normal; line-height: 25px; }
+
+.footer .footer__contact__list__telephone { border-bottom: 3px solid #353d2b; padding-bottom: 20px !important; }
+
+.footer .footer__contact__list__social { gap: 15px !important; margin-top: 10px; }
+
+.footer .footer__informations__title { font: 700 3.6rem "Nunito", sans-serif; color: #f7f7f7; margin-bottom: 30px; }
+
+.footer .footer__informations__links { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; gap: 10px; color: #ededed; }
+
+.footer .footer__informations__links a:hover { color: #f7f7f7; text-decoration: underline; }
 /*# sourceMappingURL=style.css.map */

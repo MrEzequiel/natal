@@ -1,0 +1,85 @@
+.footer {
+  background: $primary-color1;
+
+  .container {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  &__company {
+    font-size: 1.6rem;
+
+    &__abstract {
+      color: #ededed;
+      max-width: 360px;
+      margin: 30px 0 20px;
+    }
+
+    &__copy {
+      color: #dedede;
+    }
+  }
+}
+
+.footer .footer__contact {
+  &__title {
+    font-family: $title-font;
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: #f7f7f7;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    & > li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #dedede;
+
+      padding: 10px 0;
+      max-width: 200px;
+    }
+
+    &__address {
+      padding-top: 0 !important;
+      border-bottom: 3px solid $primary-color2;
+      margin-bottom: 10px;
+
+      address {
+        font-style: normal;
+        line-height: 25px;
+      }
+    }
+
+    &__telephone {
+      border-bottom: 3px solid $primary-color2;
+      padding-bottom: 20px !important;
+    }
+
+    &__social {
+      gap: 15px !important;
+      margin-top: 10px;
+    }
+  }
+}
+
+.footer .footer__informations {
+  &__title {
+    font: 700 3.6rem $title-font;
+    color: #f7f7f7;
+    margin-bottom: 30px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ededed;
+
+    a:hover {
+      color: #f7f7f7;
+      text-decoration: underline;
+    }
+  }
+}
