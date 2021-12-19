@@ -32,8 +32,39 @@
   }
 
   @media (max-width: 667px) {
+    @keyframes disappear {
+      from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+      to {
+        opacity: 0;
+        transform: translate3d(0, -100px, 0);
+      }
+    }
+
     .header__nav ul {
-      display: none;
+      animation: disappear 500ms forwards;
+
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+      max-height: 0;
+
+      background: $primary-color1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99999999;
+
+      a {
+        font-size: 3.6rem;
+      }
     }
 
     .header__nav ul.active + .header__nav__menu {
@@ -95,22 +126,13 @@
     }
 
     &.active {
-      animation: show-down 500ms forwards;
-      background: $primary-color1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-
+      visibility: visible;
+      opacity: 1;
       width: 100vw;
       height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 99999999;
-      a {
-        font-size: 3.6rem;
-      }
+      max-height: 100vh;
+
+      animation: show-down 500ms forwards;
     }
 
     a {

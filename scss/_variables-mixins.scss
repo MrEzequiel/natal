@@ -22,5 +22,11 @@ $title-font: 'Nunito', sans-serif;
     background-image: url($url);
     background-size: contain;
     background-repeat: no-repeat;
+
+    @media (max-width: 450px) {
+      width: 95px;
+      height: 25px;
+      bottom: 5px;
+    }
   }
 }
