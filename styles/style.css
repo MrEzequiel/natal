@@ -125,6 +125,10 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 .home__presentation .presentation__title--days { font-weight: 700; position: relative; z-index: 2; }
 
+.home__presentation .presentation__title--days.small { font-size: 4.8rem; }
+
+.home__presentation .presentation__title--days.small::after { width: 75px; height: 75px; }
+
 .home__presentation .presentation__title--days::after { content: ''; display: block; position: absolute; top: 0; left: -5px; background-image: url(../assets/marking1.svg); background-size: contain; z-index: -1; width: 128px; height: 128px; }
 
 #about-us { background: #424b35; }
