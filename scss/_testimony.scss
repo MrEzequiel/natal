@@ -1,33 +1,11 @@
 #testimony {
   background: $primary-color1;
-  overflow: hidden;
+
   .testimony__title {
     max-width: max-content;
     margin: 0 auto;
 
     @include insertMarking('../assets/marking2.svg');
-  }
-
-  .card-control {
-    margin: 30px auto 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    &__control {
-      cursor: pointer;
-      background: $additional-color2;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-
-      &.active {
-        cursor: default;
-        background: $additional-color1;
-      }
-    }
   }
 }
 
@@ -35,7 +13,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
+  row-gap: 70px;
   margin: 40 + 54px auto 0;
 
   .card {

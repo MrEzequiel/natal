@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 #portfolio .modal-overlay .modal-photos__photos img { -ms-flex-negative: 0; flex-shrink: 0; width: 700px; height: 100%; -o-object-fit: cover; object-fit: cover; }
 
-#testimony { background: #424b35; overflow: hidden; }
+#testimony { background: #424b35; }
 
 #testimony .testimony__title { max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; margin: 0 auto; }
 
@@ -211,13 +211,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 @media (max-width: 450px) { #testimony .testimony__title::after { width: 95px; height: 25px; bottom: 5px; } }
 
-#testimony .card-control { margin: 30px auto 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; gap: 20px; }
-
-#testimony .card-control__control { cursor: pointer; background: #673025; width: 20px; height: 20px; border-radius: 50%; }
-
-#testimony .card-control__control.active { cursor: default; background: #a83b24; }
-
-#testimony .card-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; gap: 50px; margin: 94px auto 0; }
+#testimony .card-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap; gap: 50px; row-gap: 70px; margin: 94px auto 0; }
 
 #testimony .card-container .card { position: relative; width: 250px; height: 230px; padding: 30px 20px; background: #181f14; border-radius: 25px; -webkit-transition: -webkit-box-shadow 500ms, -webkit-transform 500ms; transition: -webkit-box-shadow 500ms, -webkit-transform 500ms; transition: box-shadow 500ms, transform 500ms; transition: box-shadow 500ms, transform 500ms, -webkit-box-shadow 500ms, -webkit-transform 500ms; -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
 
@@ -231,11 +225,14 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 #testimony .card-container .card__testimony { font-size: 1.6rem; line-height: 1.5em; color: #cccccc; margin-top: 10px; }
 
-#faq .faq__title { max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; margin: 0 auto; }
+#faq .faq__title { max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; margin: 0 auto; text-align: center; }
 
 #faq .faq__title::after { content: ''; position: absolute; bottom: -5px; left: -5px; z-index: -1; display: block; width: 128px; height: 50px; background-image: url("../assets/marking3.svg"); background-size: contain; background-repeat: no-repeat; }
 
 @media (max-width: 450px) { #faq .faq__title::after { width: 95px; height: 25px; bottom: 5px; } }
+
+@media (max-width: 600px) { #faq .faq__title { max-width: 300px; }
+  #faq .faq__title::after { top: 20px; left: 20%; } }
 
 #faq .faq-container { margin-top: 40px; }
 
@@ -246,6 +243,8 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 #faq .faq-container .question__header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 #faq .faq-container .question__header .question__title { font: 700 2.4rem "Lato", sans-serif; }
+
+@media (max-width: 600px) { #faq .faq-container .question__header .question__title { font-size: 1.8rem; } }
 
 #faq .faq-container .question--active .question__answer { max-height: 500px; margin-top: 30px; opacity: 1; visibility: visible; }
 
