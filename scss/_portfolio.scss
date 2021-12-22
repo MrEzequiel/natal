@@ -65,8 +65,8 @@
     transition: all 500ms;
 
     &.active {
-      opacity: 1;
       visibility: visible;
+      opacity: 1;
 
       .modal-photos {
         transform: translate3d(0, 0, 0);

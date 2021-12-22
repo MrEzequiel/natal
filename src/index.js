@@ -5,6 +5,8 @@ import MenuMobile from './modules/MenuMobile.js'
 import initPortfolioPhotos from './modules/PortfolioPhotos.js'
 import initConfig from './modules/ScrollRevealConfig.js'
 
+initConfig()
+
 HeaderFixed()
 
 AccordionFAQ('#faq .question', 'question--active')
@@ -14,5 +16,3 @@ MenuMobile('.header__nav__menu', '.header__nav > ul')
 initPortfolioPhotos()
 
 initDateHome()
-
-initConfig()

@@ -20,6 +20,8 @@
   grid-template-columns: 2fr 1fr;
   gap: 40px;
 
+  padding-top: 60px + 100px;
+
   @media (max-width: 750px) {
     grid-template-columns: 1fr;
 

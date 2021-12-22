@@ -15,11 +15,21 @@ export default function initConfig() {
   ]
 
   const children = [
-    document.querySelector('#home .home__presentation'),
-    document.querySelector('#home .home__image'),
-    document.querySelector('.footer__company'),
-    document.querySelector('.footer__contact'),
-    document.querySelector('.footer__informations')
+    [
+      document.querySelector('#home .home__presentation'),
+      document.querySelector('#home .home__image')
+    ],
+    [
+      document.querySelector('.question:nth-child(1)'),
+      document.querySelector('.question:nth-child(2)'),
+      document.querySelector('.question:nth-child(3)'),
+      document.querySelector('.question:nth-child(4)')
+    ],
+    [
+      document.querySelector('.footer__company'),
+      document.querySelector('.footer__contact'),
+      document.querySelector('.footer__informations')
+    ]
   ]
 
   const options = {
@@ -42,12 +52,14 @@ export default function initConfig() {
     })
   })
 
-  children.forEach((item, index) => {
-    ScrollReveal().reveal(item, {
-      ...options,
-      distance: '200px',
-      duration: 800 * (index + 1),
-      origin: 'top'
+  children.forEach(arryChild =>
+    arryChild.forEach((item, index) => {
+      ScrollReveal().reveal(item, {
+        ...options,
+        distance: '150px',
+        duration: 800 * (index + 1),
+        origin: 'top'
+      })
     })
-  })
+  )
 }
