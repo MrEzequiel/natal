@@ -40,6 +40,11 @@
         position: absolute;
         top: 20px;
         right: 20px;
+
+        background: transparent;
+        &:hover {
+          box-shadow: none;
+        }
       }
 
       .portfolio__see-images__images-control {
@@ -91,9 +96,11 @@
 
     .see-image__button {
       z-index: 2;
+      position: relative;
       top: 0;
       right: 0;
-      transition: all 500ms;
+      transition-property: top, right, position;
+      transition-duration: 700ms;
     }
 
     &__images-control {

@@ -164,7 +164,9 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 #portfolio .portfolio__see-images.active .portfolio__see-images__main-image::after { background-color: transparent; }
 
-#portfolio .portfolio__see-images.active .see-image__button { position: absolute; top: 20px; right: 20px; }
+#portfolio .portfolio__see-images.active .see-image__button { position: absolute; top: 20px; right: 20px; background: transparent; }
+
+#portfolio .portfolio__see-images.active .see-image__button:hover { -webkit-box-shadow: none; box-shadow: none; }
 
 #portfolio .portfolio__see-images.active .portfolio__see-images__images-control { width: 100px; height: auto; }
 
@@ -176,7 +178,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 #portfolio .portfolio__see-images__main-image::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; background-color: rgba(66, 75, 53, 0.75); border-radius: 25px; -webkit-transition: background-color 500ms; transition: background-color 500ms; }
 
-#portfolio .portfolio__see-images .see-image__button { z-index: 2; top: 0; right: 0; -webkit-transition: all 500ms; transition: all 500ms; }
+#portfolio .portfolio__see-images .see-image__button { z-index: 2; position: relative; top: 0; right: 0; -webkit-transition-property: top, right, position; transition-property: top, right, position; -webkit-transition-duration: 700ms; transition-duration: 700ms; }
 
 #portfolio .portfolio__see-images__images-control { width: 0; height: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; gap: 10px; }
 
