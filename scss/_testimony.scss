@@ -1,5 +1,9 @@
 #testimony {
-  background: $primary-color1;
+  background-color: $primary-color1;
+
+  background-image: url('../assets/pattern-testimony.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   .testimony__title {
     max-width: max-content;

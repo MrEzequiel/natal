@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 #portfolio .portfolio__see-images__images-control img.active { cursor: default; opacity: 1; border-color: #a83b24 !important; }
 
-#testimony { background: #424b35; }
+#testimony { background-color: #424b35; background-image: url("../assets/pattern-testimony.png"); background-repeat: no-repeat; background-attachment: fixed; }
 
 #testimony .testimony__title { max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; margin: 0 auto; }
 
