@@ -148,60 +148,45 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 #portfolio.container { -ms-grid-columns: 5fr 6fr; grid-template-columns: 5fr 6fr; gap: 40px; }
 
+@media (max-width: 900px) { #portfolio.container { -ms-grid-columns: 1fr; grid-template-columns: 1fr; } }
+
 #portfolio .content__title::after { content: ''; position: absolute; bottom: -5px; left: -5px; z-index: -1; display: block; width: 128px; height: 50px; background-image: url("../assets/marking3.svg"); background-size: contain; background-repeat: no-repeat; }
 
 @media (max-width: 450px) { #portfolio .content__title::after { width: 95px; height: 25px; bottom: 5px; } }
 
-#portfolio .portfolio__see-images { position: relative; width: 100%; height: 100%; background-image: url("../assets/image-portfolio.png"); background-repeat: no-repeat; background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; border-radius: 25px; }
+#portfolio .portfolio__see-images { height: 450px; display: -webkit-box; display: -ms-flexbox; display: flex; gap: 0; }
 
-#portfolio .portfolio__see-images:hover::after { background-color: rgba(66, 75, 53, 0.5); }
+@media (max-width: 550px) { #portfolio .portfolio__see-images { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  #portfolio .portfolio__see-images .portfolio__see-images__images-control { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+  #portfolio .portfolio__see-images .portfolio__see-images__images-control img { -webkit-transform: translateY(-100px); transform: translateY(-100px); } }
 
-#portfolio .portfolio__see-images::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; background-color: rgba(66, 75, 53, 0.75); border-radius: 25px; -webkit-transition: background-color 500ms; transition: background-color 500ms; }
+#portfolio .portfolio__see-images.active { gap: 20px; }
 
-#portfolio .portfolio__see-images .see-image__button { z-index: 2; }
+#portfolio .portfolio__see-images.active .portfolio__see-images__main-image::after { background-color: transparent; }
 
-@media (max-width: 700px) { #portfolio .portfolio__see-images { height: 220px; } }
+#portfolio .portfolio__see-images.active .see-image__button { position: absolute; top: 20px; right: 20px; }
 
-#portfolio .modal-overlay { position: fixed; top: 0; left: 0; z-index: 9999999; background: rgba(24, 31, 20, 0.9); opacity: 0; visibility: hidden; display: -ms-grid; display: grid; place-content: center; height: 100vh; width: 100vw; -webkit-transition: all 500ms; transition: all 500ms; }
+#portfolio .portfolio__see-images.active .portfolio__see-images__images-control { width: 100px; height: auto; }
 
-#portfolio .modal-overlay.active { visibility: visible; opacity: 1; }
+#portfolio .portfolio__see-images.active .portfolio__see-images__images-control img { visibility: visible; -webkit-transform: translateX(0); transform: translateX(0); border-width: 2px !important; border-style: solid !important; border-color: transparent; }
 
-#portfolio .modal-overlay.active .modal-photos { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+#portfolio .portfolio__see-images__main-image { position: relative; width: 100%; height: 100%; background-image: url("../assets/image-portfolio.png"); background-repeat: no-repeat; background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; border-radius: 25px; z-index: 2; }
 
-#portfolio .modal-overlay .modal-photos { position: relative; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 0 40px; -ms-flex-negative: 0; flex-shrink: 0; gap: 20px; -webkit-transform: translate3d(0, -50px, 0); transform: translate3d(0, -50px, 0); -webkit-transition: -webkit-transform 700ms; transition: -webkit-transform 700ms; transition: transform 700ms; transition: transform 700ms, -webkit-transform 700ms; }
+#portfolio .portfolio__see-images__main-image:hover::after { background-color: rgba(66, 75, 53, 0.5); }
 
-#portfolio .modal-overlay .modal-photos__btn-close { position: absolute; top: 0; right: 40px; cursor: pointer; background: transparent; }
+#portfolio .portfolio__see-images__main-image::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; background-color: rgba(66, 75, 53, 0.75); border-radius: 25px; -webkit-transition: background-color 500ms; transition: background-color 500ms; }
 
-@media (max-width: 900px) { #portfolio .modal-overlay .modal-photos__btn-close { top: -50px; } }
+#portfolio .portfolio__see-images .see-image__button { z-index: 2; top: 0; right: 0; -webkit-transition: all 500ms; transition: all 500ms; }
 
-@media (max-width: 900px) { #portfolio .modal-overlay .modal-photos .modal-photos__btn-prev { left: 100px; }
-  #portfolio .modal-overlay .modal-photos .modal-photos__btn-next { right: 100px; } }
+#portfolio .portfolio__see-images__images-control { width: 0; height: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; gap: 10px; }
 
-#portfolio .modal-overlay .modal-photos__btn-prev, #portfolio .modal-overlay .modal-photos__btn-next { -ms-flex-negative: 0; flex-shrink: 0; cursor: pointer; background: transparent; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; background: #a83b24; }
+#portfolio .portfolio__see-images__images-control img:nth-child(1) { -webkit-transition: all 0.5s, -webkit-transform 500ms; transition: all 0.5s, -webkit-transform 500ms; transition: all 0.5s, transform 500ms; transition: all 0.5s, transform 500ms, -webkit-transform 500ms; }
 
-#portfolio .modal-overlay .modal-photos__btn-prev img, #portfolio .modal-overlay .modal-photos__btn-next img { padding: 0; margin: 0; }
+#portfolio .portfolio__see-images__images-control img:nth-child(2) { -webkit-transition: all 0.5s, -webkit-transform 1000ms; transition: all 0.5s, -webkit-transform 1000ms; transition: all 0.5s, transform 1000ms; transition: all 0.5s, transform 1000ms, -webkit-transform 1000ms; }
 
-#portfolio .modal-overlay .modal-photos__btn-prev:disabled, #portfolio .modal-overlay .modal-photos__btn-next:disabled { cursor: not-allowed; background: #673025; }
+#portfolio .portfolio__see-images__images-control img { -o-object-fit: cover; object-fit: cover; height: 70px; cursor: pointer; border-radius: 10px; opacity: 0.5; border: none; visibility: hidden; -webkit-transform: translateX(-100px); transform: translateX(-100px); }
 
-@media (max-width: 900px) { #portfolio .modal-overlay .modal-photos__btn-prev, #portfolio .modal-overlay .modal-photos__btn-next { position: absolute; bottom: -70px; } }
-
-#portfolio .modal-overlay .modal-photos__photos { overflow: hidden; max-width: 700px; height: 465px; border-radius: 25px; }
-
-@media (max-width: 800px) { #portfolio .modal-overlay .modal-photos__photos { max-width: 500px; }
-  #portfolio .modal-overlay .modal-photos__photos .modal-photos__photos-container { width: 500px; }
-  #portfolio .modal-overlay .modal-photos__photos img { width: 500px; } }
-
-@media (max-width: 600px) { #portfolio .modal-overlay .modal-photos__photos { max-width: 400px; }
-  #portfolio .modal-overlay .modal-photos__photos .modal-photos__photos-container { width: 400px; }
-  #portfolio .modal-overlay .modal-photos__photos img { width: 400px; } }
-
-@media (max-width: 450px) { #portfolio .modal-overlay .modal-photos__photos { max-width: 300px; }
-  #portfolio .modal-overlay .modal-photos__photos .modal-photos__photos-container { width: 300px; }
-  #portfolio .modal-overlay .modal-photos__photos img { width: 300px; } }
-
-#portfolio .modal-overlay .modal-photos__photos-container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 700px; height: 100%; border-radius: 25px; -webkit-transition: -webkit-transform 800ms; transition: -webkit-transform 800ms; transition: transform 800ms; transition: transform 800ms, -webkit-transform 800ms; }
-
-#portfolio .modal-overlay .modal-photos__photos img { -ms-flex-negative: 0; flex-shrink: 0; width: 700px; height: 100%; -o-object-fit: cover; object-fit: cover; }
+#portfolio .portfolio__see-images__images-control img.active { cursor: default; opacity: 1; border-color: #a83b24 !important; }
 
 #testimony { background: #424b35; }
 

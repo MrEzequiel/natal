@@ -2,6 +2,10 @@
   &.container {
     grid-template-columns: 5fr 6fr;
     gap: 40px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .content__title {
@@ -9,192 +13,118 @@
   }
 
   .portfolio__see-images {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    background-image: url('../assets/image-portfolio.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    height: 450px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
+    gap: 0;
 
-    &:hover::after {
-      background-color: rgba($primary-color1, 0.5);
+    @media (max-width: 550px) {
+      flex-direction: column;
+
+      .portfolio__see-images__images-control {
+        flex-direction: row;
+
+        img {
+          transform: translateY(-100px);
+        }
+      }
     }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
+    &.active {
+      gap: 20px;
+
+      .portfolio__see-images__main-image::after {
+        background-color: transparent;
+      }
+
+      .see-image__button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .portfolio__see-images__images-control {
+        width: 100px;
+        height: auto;
+
+        img {
+          visibility: visible;
+          transform: translateX(0);
+          border-width: 2px !important;
+          border-style: solid !important;
+          border-color: transparent;
+        }
+      }
+    }
+
+    &__main-image {
+      position: relative;
       width: 100%;
       height: 100%;
-      z-index: 0;
-      background-color: rgba($primary-color1, 0.75);
+
+      background-image: url('../assets/image-portfolio.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 25px;
-      transition: background-color 500ms;
+      z-index: 2;
+
+      &:hover::after {
+        background-color: rgba($primary-color1, 0.5);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: rgba($primary-color1, 0.75);
+        border-radius: 25px;
+        transition: background-color 500ms;
+      }
     }
 
     .see-image__button {
       z-index: 2;
+      top: 0;
+      right: 0;
+      transition: all 500ms;
     }
 
-    @media (max-width: 700px) {
-      height: 220px;
-    }
-  }
+    &__images-control {
+      width: 0;
+      height: 0;
 
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999999;
-
-    background: rgba($secondary-color, 0.9);
-    opacity: 0;
-    visibility: hidden;
-    display: grid;
-    place-content: center;
-    height: 100vh;
-    width: 100vw;
-
-    transition: all 500ms;
-
-    &.active {
-      visibility: visible;
-      opacity: 1;
-
-      .modal-photos {
-        transform: translate3d(0, 0, 0);
-      }
-    }
-
-    .modal-photos {
-      position: relative;
-
-      width: 100%;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 40px;
-      flex-shrink: 0;
+      flex-direction: column;
+      gap: 10px;
 
-      gap: 20px;
+      @for $i from 1 through 2 {
+        img:nth-child(#{$i}) {
+          transition: all 0.5s, transform 500ms * $i;
+        }
+      }
 
-      transform: translate3d(0, -50px, 0);
-      transition: transform 700ms;
-
-      &__btn-close {
-        position: absolute;
-        top: 0;
-        right: 40px;
-
+      img {
+        object-fit: cover;
+        height: 70px;
         cursor: pointer;
-        background: transparent;
+        border-radius: 10px;
+        opacity: 0.5;
+        border: none;
 
-        @media (max-width: 900px) {
-          top: -50px;
-        }
-      }
+        visibility: hidden;
+        transform: translateX(-100px);
 
-      @media (max-width: 900px) {
-        .modal-photos__btn-prev {
-          left: 100px;
-        }
-        .modal-photos__btn-next {
-          right: 100px;
-        }
-      }
-
-      &__btn-prev,
-      &__btn-next {
-        flex-shrink: 0;
-        cursor: pointer;
-        background: transparent;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background: $additional-color1;
-
-        img {
-          padding: 0;
-          margin: 0;
-        }
-
-        &:disabled {
-          cursor: not-allowed;
-          background: $additional-color2;
-        }
-
-        @media (max-width: 900px) {
-          position: absolute;
-          bottom: -70px;
-        }
-      }
-
-      &__photos {
-        overflow: hidden;
-        max-width: 700px;
-        height: 465px;
-        border-radius: 25px;
-
-        @media (max-width: 800px) {
-          max-width: 500px;
-
-          .modal-photos__photos-container {
-            width: 500px;
-          }
-
-          img {
-            width: 500px;
-          }
-        }
-
-        @media (max-width: 600px) {
-          max-width: 400px;
-
-          .modal-photos__photos-container {
-            width: 400px;
-          }
-
-          img {
-            width: 400px;
-          }
-        }
-
-        @media (max-width: 450px) {
-          max-width: 300px;
-
-          .modal-photos__photos-container {
-            width: 300px;
-          }
-
-          img {
-            width: 300px;
-          }
-        }
-
-        &-container {
-          display: flex;
-          width: 700px;
-          height: 100%;
-          border-radius: 25px;
-          transition: transform 800ms;
-        }
-
-        img {
-          flex-shrink: 0;
-          width: 700px;
-          height: 100%;
-          object-fit: cover;
+        &.active {
+          cursor: default;
+          opacity: 1;
+          border-color: $additional-color1 !important;
         }
       }
     }
