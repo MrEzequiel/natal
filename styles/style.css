@@ -125,13 +125,13 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 .home__presentation .presentation__title--days { font-weight: 700; position: relative; z-index: 2; }
 
-.home__presentation .presentation__title--days.small { font-size: 4.8rem; }
+.home__presentation .presentation__title--days.small { font-size: 5.6rem; }
 
-.home__presentation .presentation__title--days.small::after { width: 75px; height: 75px; }
+.home__presentation .presentation__title--days.small::after { width: 75px; height: 75px; left: 10%; }
 
 .home__presentation .presentation__title--days::after { content: ''; display: block; position: absolute; top: 0; left: -5px; background-image: url(../assets/marking1.svg); background-size: contain; z-index: -1; width: 128px; height: 128px; }
 
-#about-us { background: #424b35; }
+#about-us { margin-top: -10px; background: #424b35; }
 
 #about-us .content { display: -ms-grid; display: grid; -ms-grid-columns: 5fr 6fr; grid-template-columns: 5fr 6fr; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 40px; }
 
@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul { font-size: 1em; font-weight: normal; }
 
 #portfolio .portfolio__see-images__images-control img.active { cursor: default; opacity: 1; border-color: #a83b24 !important; }
 
-#testimony { background-color: #424b35; background-image: url("../assets/pattern-testimony.png"); background-repeat: no-repeat; background-attachment: fixed; background-size: 100vw; background-position: center center; }
+#testimony { background-color: #424b35; background-image: url("../assets/pattern-testimony.png"); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center center; }
 
 #testimony .testimony__title { max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; margin: 0 auto; }
 
